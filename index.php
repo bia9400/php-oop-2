@@ -1,3 +1,12 @@
+<?php 
+require_once "classi/PaymentMethods.php";
+require_once "classi/Users.php";
+require_once "classi/Products.php";
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
