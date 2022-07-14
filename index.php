@@ -13,9 +13,10 @@ $croccantini->setScadenza("12-12-23")->setIngredients(["pollo","manzo","tuorlo",
 $cuccia->setPrice(200)->getSconto($user1->status);
 $cuccia->setAgeOfToy("Vietato minori di 5 anni")->setSize("12cmx34cmx1m");
 $osso->setPrice(10)->getSconto($user1->status);
-$cuccia->setAgeOfToy("Tutte le età")->setSize("5cm x 3cm");
+$cuccia->setAgeOfToy("Tutte le età")->setSize("5cm x 3cm"); 
+echo "Benvenuto:". " " .  $user1->getUserName() ." <br>";
 if($carta1->canIBuy){
-    echo "Benvenuto:". " " .  $user1->getUserName() ." <br>";
+   
     if($user1->status){
         echo "Hai ottenuto uno sconto perché sei registrato";
     }
@@ -28,6 +29,44 @@ else{
     echo "Carta scaduta non puoi acquistare il prodotto";
 }
 
+
+$user2= new User("Melo Settimio","peppino33");
+$carta2= new PaymentMethods();
+$carta2->setCardId(23425873562383434)->setDataScadenza(2019)->paymentSucsesss();
+echo "<br><br> Benvenuto:". " " .  $user2->getUserName() ." <br>";
+if($carta2->canIBuy){
+    
+    if($user2->status){
+        echo "Hai ottenuto uno sconto perché sei registrato";
+    }
+    else{
+        echo "Prezzo pieno, non sei registrato";
+    }
+    var_dump($croccantini,$cuccia,$osso);
+}
+else{
+    echo "Carta scaduta non puoi acquistare il prodotto <br><br>";
+}
+echo "<br>";
+$user3= new User("","");
+$carta3= new PaymentMethods();
+$carta3->setCardId(23425873562383434)->setDataScadenza(2028)->paymentSucsesss();
+$osso2=new Toys(23472174674,4,"https://www.reviewbox.it/wp-content/uploads/2019/10/osso-per-cani-principale-xcyp1-1300x803.jpg");
+$osso2->setPrice(10)->getSconto($user3->status);
+echo "<br><br> Benvenuto:". " " .  $user3->getUserName() ." <br>";
+if($carta3->canIBuy){
+    
+    if($user3->status){
+        echo "Hai ottenuto uno sconto perché sei registrato";
+    }
+    else{
+        echo "Prezzo pieno, non sei registrato";
+    }
+    var_dump($osso2);
+}
+else{
+    echo "Carta scaduta non puoi acquistare il prodotto";
+}
 ?>
 
 
