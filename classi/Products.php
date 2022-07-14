@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . "/productsClasses/Food.php";
-require_once __DIR__ . "/productsClasses/Toys.php";
+include_once __DIR__ ."/productsClasses/Food.php";
+include_once __DIR__ ."/productsClasses/Toys.php";
 
 class Products {
 
@@ -8,8 +8,10 @@ protected $idProduct;
 protected $imgProduct;
 protected $price;
 
-public function getCardHtml(){
-    
+public function getSconto($value){
+    if($value){
+        $this->price= 0.8* $this->price;
+    }
 }
 
 /**
