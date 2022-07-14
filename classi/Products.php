@@ -1,76 +1,84 @@
 <?php
-include_once __DIR__ ."/productsClasses/Food.php";
-include_once __DIR__ ."/productsClasses/Toys.php";
+include_once __DIR__ . "/productsClasses/Food.php";
+include_once __DIR__ . "/productsClasses/Toys.php";
 
-class Products {
+class Products
+{
 
-protected $idProduct;
-protected $imgProduct;
-protected $price;
+    protected $idProduct;
+    protected $imgProduct;
+    protected $price;
 
-public function getSconto($value){
-    if($value){
-        $this->price= 0.8* $this->price;
+    public function getSconto($value)
+    {
+        if ($value) {
+            $this->price = 0.8 * $this->price;
+        }
     }
-}
+    public function __construct($id, $price, $img)
+    {
+        $this->setIdProduct($id);
+        $this->setPrice($price);
+        $this->setImgProduct($img);
+    }
 
-/**
- * Get the value of idProduct
- */ 
-public function getIdProduct()
-{
-return $this->idProduct;
-}
+    /**
+     * Get the value of idProduct
+     */
+    public function getIdProduct()
+    {
+        return $this->idProduct;
+    }
 
-/**
- * Set the value of idProduct
- *
- * @return  self
- */ 
-public function setIdProduct($idProduct)
-{
-$this->idProduct = $idProduct;
+    /**
+     * Set the value of idProduct
+     *
+     * @return  self
+     */
+    public function setIdProduct($idProduct)
+    {
+        $this->idProduct = $idProduct;
 
-return $this;
-}
+        return $this;
+    }
 
-/**
- * Get the value of imgProduct
- */ 
-public function getImgProduct()
-{
-return $this->imgProduct;
-}
+    /**
+     * Get the value of imgProduct
+     */
+    public function getImgProduct()
+    {
+        return $this->imgProduct;
+    }
 
-/**
- * Set the value of imgProduct
- *
- * @return  self
- */ 
-public function setImgProduct($imgProduct)
-{
-$this->imgProduct = $imgProduct;
+    /**
+     * Set the value of imgProduct
+     *
+     * @return  self
+     */
+    public function setImgProduct($imgProduct)
+    {
+        $this->imgProduct = $imgProduct;
 
-return $this;
-}
+        return $this;
+    }
 
-/**
- * Get the value of price
- */ 
-public function getPrice()
-{
-return $this->price;
-}
+    /**
+     * Get the value of price
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
 
-/**
- * Set the value of price
- *
- * @return  self
- */ 
-public function setPrice($price)
-{
-$this->price = $price;
+    /**
+     * Set the value of price
+     *
+     * @return  self
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
 
-return $this;
-}
+        return $this;
+    }
 }

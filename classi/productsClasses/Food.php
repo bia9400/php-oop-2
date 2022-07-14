@@ -5,7 +5,7 @@ class Food extends Products{
     protected $scadenza;
     protected $ingredients;
     public function getTimeScadenza(){
-
+        
     }
 
 
@@ -33,7 +33,7 @@ class Food extends Products{
     /**
      * Get the value of ngredients
      */ 
-    public function getNgredients()
+    public function getIngredients()
     {
         return $this->ngredients;
     }
@@ -43,7 +43,7 @@ class Food extends Products{
      *
      * @return  self
      */ 
-    public function setNgredients($ngredients)
+    public function setIngredients($ngredients)
     {
         $this->ngredients = $ngredients;
 
