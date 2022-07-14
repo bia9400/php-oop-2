@@ -1,5 +1,5 @@
 <?php
-require_once "../Products.php";
+require_once __DIR__ ."../Products.php";
 
 class Toys extends Products{
     protected $ageOfToy;

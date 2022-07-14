@@ -1,5 +1,5 @@
 <?php
-require_once "Users.php";
+require_once __DIR__ . "Users.php";
  class PaymentMethods extends User{
     private $cardId;
     private $pin;

@@ -1,5 +1,5 @@
 <?php
-require_once "../Products.php";
+require_once __DIR__ . "../Products.php";
 class Food extends Products{
 
     protected $scadenza;
