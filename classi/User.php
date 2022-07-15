@@ -1,9 +1,13 @@
 <?php
+require_once __DIR__ ."/../classi/traits/Cart.php";
+require_once __DIR__ ."/../classi/traits/PaymentMethods.php";
 
 class User{
+    use Cart, PaymentMethods;
     protected $userName;
     protected $userPassword;
     public $status;
+    
     private function isRegistered(){
         if($this->userName=="" || $this->userPassword==""){
             $this->status=false;
@@ -18,6 +22,7 @@ class User{
         $this->setUserName($name);
         $this->setUserPassword($password);
         $this->isRegistered();
+       
     }
 
     /**

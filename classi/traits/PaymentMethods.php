@@ -1,19 +1,19 @@
 <?php
-require_once __DIR__ . "/User.php";
-class PaymentMethods extends User
+
+trait PaymentMethods 
 {
     private $cardId;
     private $pin;
     private $dataScadenza;
-    public $canIBuy;
+    
     public function paymentSucsesss()
     {
         $date=date("Y");
         if($date-$this->dataScadenza <=0){
-            $this->canIBuy=true;
+            return true;
         }
         else{
-            $this->canIBuy=false;
+            return false;
         }
     }
     /**

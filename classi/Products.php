@@ -9,12 +9,7 @@ class Products
     protected $imgProduct;
     protected $price;
 
-    public function getSconto($value)
-    {
-        if ($value) {
-            $this->price = 0.8 * $this->price;
-        }
-    }
+    
     public function __construct($id, $price, $img)
     {
         $this->setIdProduct($id);
