@@ -14,6 +14,7 @@ $user2 = new User("Turidu dd", "dhdhdh");
 
 $user->addPaymentMethods(new CreditCard("Master Card",32421434124,123,2025));
 $user->addPaymentMethods(new CreditCard("Visa",2397311212,998,2020));
+$user->addPaymentMethods(new CreditCard("American Express",2873462837461238,555,2027));
 
 $shopProduct=[
     new Food("Croccantini", 2.25, "2",),
