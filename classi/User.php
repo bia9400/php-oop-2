@@ -7,7 +7,10 @@ class User{
     protected $userName;
     protected $userPassword;
     public $status;
-    
+    public $arrayPayments=[];
+    public function addPaymentMethods($method){
+        $this->arrayPayments[]=$method;
+    }
     private function isRegistered(){
         if($this->userName=="" || $this->userPassword==""){
             $this->status=false;

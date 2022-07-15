@@ -5,7 +5,13 @@ trait PaymentMethods
     private $cardId;
     private $pin;
     private $dataScadenza;
-    
+    public function setCreditCard($_cardId,$_pin,$_dataScadenza){
+        $this->setCardId($_cardId);
+        $this->setPin($_pin);
+        $this->setDataScadenza($_dataScadenza);
+
+
+    }
     public function paymentSucsesss()
     {
         $date=date("Y");
