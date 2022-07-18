@@ -7,7 +7,8 @@ $metodopagamento = key_exists("metodo", $_GET) ? (int) $_GET["metodo"] : null;
 $userName=key_exists("userName",$_GET) ?  $_GET["userName"] : "";
 $userLastName=key_exists("userLastName",$_GET) ?  $_GET["userLastName"] : "";
 if($userName=="" || $userLastName==""){
-    echo "Inserire delle key userName e userLastName nell'url per accedere ed avere lo sconto <br><br><br>";
+    throw new Exception("Inserire delle key userName e userLastName nell'url per accedere ed avere lo sconto");
+    
 }
 $user = new User($userName, $userLastName);
 $user2 = new User("Turidu dd", "dhdhdh");
